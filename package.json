@@ -1,0 +1,17 @@
+{
+  "name": "weather_microservice",
+  "version": "1.0.0",
+  "description": "This is a simple weather microservice that provides weather information for a given location using the geographical coordinates of latitude and longitude. After receiving the coordinates passed from my partner's app, I query the OpenWeather API to get the weather information as a middleman. The weather information is then returned to the partner's app in JSON format.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sajidah W",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2"
+  }
+}
