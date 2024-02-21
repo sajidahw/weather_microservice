@@ -7,7 +7,7 @@ This is a simple weather microservice that provides weather information for a gi
 ## How to clone and run weather microservice files
 
 ```bash
-git clone GITHUB REPO URL
+git clone https://github.com/sajidahw/weather_microservice
 cd weather_microservice
 npm install
 ```
