@@ -79,7 +79,7 @@ Open up a new terminal and run the following command to connect to the Microserv
 node server.js
 ```
 
-Open up a second terminal and run the following command to generate weather retrieval responses for several different locations:
+Open up a second terminal and run the following command to generate weather retrieval responses for several locations:
 
 ```bash
 node testWeather.js
