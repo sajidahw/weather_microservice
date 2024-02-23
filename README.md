@@ -72,4 +72,5 @@ From the example above using San Francisco's geo coordinates, the following JSON
 </br>
 
 ## UML sequence diagram for the weather microservice
-UML Sequence Diagram for Weather_Microservice
+
+![UML Sequence Diagram for Weather_Microservice](https://github.com/sajidahw/weather_microservice/assets/88634981/634e565f-f847-4fe0-8659-63781b1f20f9)
