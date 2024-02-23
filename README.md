@@ -71,6 +71,23 @@ From the example above using San Francisco's geo coordinates, the following JSON
 
 </br>
 
+<br>
+##Using the <i><b>Test Script: testWeather.js</b></i> file to connect to the weather microservice and send a request and receive responses for weather data on predetermined locations:
+<br>
+Open up a new terminal and run the following command to connect to the Microservice server:
+
+```bash
+node server.js
+```
+
+Open up a second terminal and run the following command to generate weather retrieval responses for several different locations:
+
+```bash
+node testWeather.js
+```
+
+<br>
+
 ## UML sequence diagram for the weather microservice
 
 ![UML Sequence Diagram for Weather_Microservice](https://github.com/sajidahw/weather_microservice/assets/88634981/634e565f-f847-4fe0-8659-63781b1f20f9)

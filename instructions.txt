@@ -1,5 +1,5 @@
 
-
+**** to run manually in terminal ****
 To start the server, open up a terminal and run the command: node server.js
 
  in a separate terminal, run the curl command with URL+endpoint+query parameters to see the weather data returned in JSON format.
@@ -7,3 +7,9 @@ To start the server, open up a terminal and run the command: node server.js
  Ex for SF: curl "localhost:8080/weather_microservice?lat=37.7749&lon=122.4194"
 
  should receive a JSON object with the weather data for San Francisco, ex: {"description":"Clouds","temperature":32,"icon":"04d"}
+
+
+ *** to use testing script***
+ Open up two terminals.
+ In first terminal, type node server.js to run the microservice
+ In second terminal, type node testWeather.js to run the test script which prompts requesting and retrieving basic weather info for several geo coordinates.
