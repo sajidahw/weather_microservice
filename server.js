@@ -6,11 +6,13 @@
 require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors"); // frontend will be on a different server
 const app = express(); // create an instance of express
 const PORT = process.env.PORT || 8080; // set the port to 8080
 const OPENWEATHER_API_KEY = process.env.OPENWEATHER_API_KEY;
 const OPENWEATHER_API_URL = "https://api.openweathermap.org/data/2.5";
 
+app.use(cors()); // enable CORS for all routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -67,3 +69,9 @@ app.listen(PORT, () => {
     press Ctrl-C to terminate.`
   );
 });
+
+// testing coordinates
+// Tokyo: 35.652832, 139.839478
+// San Francisco: 37.7749, 122.4194
+// New York: 40.7128, 74.0060
+// London: 51.5072, 0.1276

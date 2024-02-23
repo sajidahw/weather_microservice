@@ -27,3 +27,6 @@ yarn-error.log*
 .vscode/
 .vscode/*
 .vscode
+
+./.testWeather.js
+.testWeather.js
