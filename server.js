@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 // URL Endpoint to get weather by city coordinates
 // fetch the weather data by coordinates from Alex's microservice
 app.get(`/weather_microservice`, async (req, res) => {
-  // saved the passed along coordinates of latitude and longitude from the query parameters
+  // saved the passed along coordinates of latitude and longitude from the query parameters from Alex's request to microservice
   const lat = req.query.lat;
   const lon = req.query.lon;
 
