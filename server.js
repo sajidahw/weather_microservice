@@ -77,6 +77,9 @@ app.listen(PORT, () => {
   );
 });
 
+// exporting the Express API to Vercel to be a serverless function
+module.exports = app;
+
 // testing coordinates
 // Tokyo: 35.652832, 139.839478
 // San Francisco: 37.7749, 122.4194
