@@ -16,6 +16,13 @@ app.use(cors()); // enable CORS for all routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// root route
+app.get("/", (req, res) => {
+  res.send(
+    "To access Weather Microservice, access it via 'http://localhost:8080/weather_microservice'."
+  );
+});
+
 // URL Endpoint to get weather by city coordinates
 // fetch the weather data by coordinates from Alex's microservice
 app.get(`/weather_microservice`, async (req, res) => {
