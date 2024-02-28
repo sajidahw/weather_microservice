@@ -90,4 +90,4 @@ node testWeather.js
 
 ## UML sequence diagram for the weather microservice
 
-![UML Sequence Diagram for Weather_Microservice](https://github.com/sajidahw/weather_microservice/assets/88634981/634e565f-f847-4fe0-8659-63781b1f20f9)
+![updated_UML Sequence Diagram for Weather_Microservice](https://github.com/sajidahw/weather_microservice/assets/88634981/8fb917b2-5071-4c59-982d-ef001a9d6f8f)
