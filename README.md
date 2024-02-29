@@ -17,7 +17,7 @@ npm install
 ## How to access the weather microservice online
 
 ```bash
-https://weather-microservice.vercel.app/microservice_weather
+https://weather-microservice.vercel.app/weather_microservices
 ```
 
 </br>
@@ -58,7 +58,7 @@ Example http request in order to receive data to generate a response for San Fra
 curl "localhost:8080/weather_microservice?lat=37.7749&lon=122.4194"
 
 to run online:
-curl "https://weather-microservice.vercel.app/microservice_weather?lat=37.7749&lon=122.4194"
+curl "https://weather-microservice.vercel.app/weather_microservice?lat=37.7749&lon=122.4194"
 ```
 
 </br>

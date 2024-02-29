@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send(
     `"To access Weather Microservice: 
     For local access via http://localhost:8080/weather_microservice
-    For deployed access via https://weather_microservice.vercel.app/microservice_weather"`
+    For deployed access via https://weather-microservice.vercel.app/weather_microservice"`
   );
 });
 

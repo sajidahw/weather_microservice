@@ -9,7 +9,8 @@ async function testWeatherServiceByCoordinates(lat, lon) {
   try {
     // making a GET request to the microservice URL while logging response
     const response = await axios.get(
-      `http://localhost:8080/weather_microservice?lat=${lat}&lon=${lon}`
+      `http://localhost:8080/weather_microservice?lat=${lat}&lon=${lon}` ||
+        `https://weather_microservice.vercel.app/weather_microservice?lat=${lat}&lon=${lon}`
       // `http://localhost:8080/weather_microservice`,
       // {// params separated from base url
       //   params: {
