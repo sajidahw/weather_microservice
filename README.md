@@ -16,8 +16,10 @@ npm install
 
 ## How to access the weather microservice online
 
+base url:
+
 ```bash
-https://weather-microservice.vercel.app/weather_microservices
+https://weather-microservice.vercel.app/weather_microservice
 ```
 
 </br>
