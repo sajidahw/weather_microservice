@@ -19,7 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 // root route
 app.get("/", (req, res) => {
   res.send(
-    "To access Weather Microservice, access it via 'http://localhost:8080/weather_microservice'."
+    `"To access Weather Microservice: 
+    For local access via http://localhost:8080/weather_microservice
+    For deployed access via https://weather_microservice.vercel.app/microservice_weather"`
   );
 });
 

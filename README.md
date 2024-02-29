@@ -4,7 +4,7 @@ This is a simple weather microservice that provides weather information for a gi
 
 </br>
 
-## How to clone and run weather microservice files
+## How to clone and run weather microservice files locally
 
 ```bash
 git clone https://github.com/sajidahw/weather_microservice
@@ -13,6 +13,12 @@ npm install
 ```
 
 </br>
+
+## How to run the weather microservice online
+
+```bash
+https://weather-microservice.vercel.app/microservice_weather
+```
 
 To run the weather microservice, create an OpenWeather API key (after creating an account) to save within an .env file at the root file. Then run using the following command in a new terminal to start the Express server:
 
@@ -46,6 +52,9 @@ Example http request in order to receive data to generate a response for San Fra
 
 ```javascript
 curl "localhost:8080/weather_microservice?lat=37.7749&lon=122.4194"
+
+to run online:
+curl "https://weather-microservice.vercel.app/microservice_weather?lat=37.7749&lon=122.4194"
 ```
 
 </br>
