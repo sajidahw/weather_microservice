@@ -4,7 +4,7 @@ This is a simple weather microservice that provides weather information for a gi
 
 </br>
 
-## How to clone and run weather microservice files locally
+## How to clone to run weather microservice files locally
 
 ```bash
 git clone https://github.com/sajidahw/weather_microservice
@@ -19,6 +19,10 @@ npm install
 ```bash
 https://weather-microservice.vercel.app/microservice_weather
 ```
+
+</br>
+
+## How to run the weather microservice
 
 To run the weather microservice, create an OpenWeather API key (after creating an account) to save within an .env file at the root file. Then run using the following command in a new terminal to start the Express server:
 
