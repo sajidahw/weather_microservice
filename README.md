@@ -58,8 +58,10 @@ Example http request in order to receive data to generate a response for San Fra
 
 ```javascript
 curl "localhost:8080/weather_microservice?lat=37.7749&lon=122.4194"
+```
 
 to run online:
+```javascript
 curl "https://weather-microservice.vercel.app/weather_microservice?lat=37.7749&lon=122.4194"
 ```
 
