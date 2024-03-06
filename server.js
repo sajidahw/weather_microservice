@@ -7,8 +7,8 @@ require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors"); // frontend will be on a different server
-const app = express(); // create an instance of express
-const PORT = process.env.PORT || 8080; // set the port to 8080
+const app = express();
+const PORT = process.env.PORT || 8080;
 const OPENWEATHER_API_KEY = process.env.OPENWEATHER_API_KEY;
 const OPENWEATHER_API_URL = "https://api.openweathermap.org/data/2.5";
 
@@ -16,7 +16,6 @@ app.use(cors()); // enable CORS for all routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// root route
 app.get("/", (req, res) => {
   res.send(
     `"To access Weather Microservice: 
@@ -32,22 +31,17 @@ app.get(`/weather_microservice`, async (req, res) => {
   const lat = req.query.lat;
   const lon = req.query.lon;
 
-  // Checking if the lat and lon parameters are present
   if (!lat || !lon) {
     return res
       .status(400)
       .send("Error: The latitude and longitude parameters are missing!");
   }
-  // console.log(OPENWEATHER_API_URL);
+
   try {
     // Fetching weather data from OpenWeather API as middleman & saving retrieved weather data to var to retain it
     const coordWeatherData = await axios.get(
       `${OPENWEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${OPENWEATHER_API_KEY}&units=imperial`
     );
-
-    // console.log(
-    //   `${OPENWEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${OPENWEATHER_API_KEY}&units=imperial`
-    // );
 
     // retrieving specific data elements which Alex desires instead of all data
     const shortCoordWeatherData = {
@@ -55,12 +49,9 @@ app.get(`/weather_microservice`, async (req, res) => {
       description: coordWeatherData.data.weather[0].main,
       temperature: Math.round(coordWeatherData.data.main.temp),
       icon: coordWeatherData.data.weather[0].icon,
-      // icon: src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`}
     };
 
-    res.status(200).json(shortCoordWeatherData); // sending weather back to Alex as JSON object
-
-    // console.log(coordWeatherData.data.main.temp);
+    res.status(200).json(shortCoordWeatherData); // sending weather back to Alex
   } catch (error) {
     console.error(error);
     res
@@ -71,7 +62,6 @@ app.get(`/weather_microservice`, async (req, res) => {
   }
 });
 
-// Listen on the port //
 app.listen(PORT, () => {
   console.log(
     ` 🌤️ Weather Microservice Server is running on http://localhost:${PORT}; 

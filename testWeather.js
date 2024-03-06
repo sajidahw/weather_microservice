@@ -1,23 +1,13 @@
 // Description: This script tests the weather microservice by only making an http request via axios and calling it with different coordinates.
 
-const axios = require("axios"); // to make HTTP requests
+const axios = require("axios");
 
 // simulates partner calling my microservice with different coordinates
-// using axios params object instead of concatenating params in URL worked and is preferred by axios so it can separate from base url & encode it itself; but concatenation also works
-
 async function testWeatherServiceByCoordinates(lat, lon) {
   try {
-    // making a GET request to the microservice URL while logging response
     const response = await axios.get(
       `http://localhost:8080/weather_microservice?lat=${lat}&lon=${lon}` ||
         `https://weather_microservice.vercel.app/weather_microservice?lat=${lat}&lon=${lon}`
-      // `http://localhost:8080/weather_microservice`,
-      // {// params separated from base url
-      //   params: {
-      //     lat: lat,
-      //     lon: lon,
-      //   },
-      // }
     );
     console.log(
       "\nRequest to microservice: \n",
