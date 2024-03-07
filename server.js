@@ -64,7 +64,9 @@ app.get(`/weather_microservice`, async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(
-    ` 🌤️ Weather Microservice Server is running on http://localhost:${PORT}; 
+    ` 🌤️ ` +
+      ` ` +
+      `Weather Microservice Server is running on http://localhost:${PORT}; 
     press Ctrl-C to terminate.`
   );
 });
