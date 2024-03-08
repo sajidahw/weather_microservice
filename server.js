@@ -38,7 +38,6 @@ app.get(`/weather_microservice`, async (req, res) => {
   }
 
   try {
-    // Fetching weather data from OpenWeather API as middleman & saving retrieved weather data to var to retain it
     const coordWeatherData = await axios.get(
       `${OPENWEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${OPENWEATHER_API_KEY}&units=imperial`
     );
